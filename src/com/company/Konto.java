@@ -4,11 +4,9 @@ import java.util.UUID;
 
 public class Konto {
     private int saldo = 0;
-    private String iban;
 
-    public Konto(int startKapital) {
-        saldo = startKapital;
-        iban = UUID.randomUUID().toString();
+    public Konto(int einzahlen) {
+        saldo = einzahlen;
     }
 
     public void verzinsen(double zinsSatz) {
@@ -16,7 +14,7 @@ public class Konto {
     }
 
     public String toString() {
-        return "IBAN: " + iban + " | Saldo: " + saldo;
+        return "Saldo: " + saldo;
     }
 
     public void print() {

@@ -4,15 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-    private int gruendungsJahr;
-    private String name;
-    static double zinsSatz = 0.05;
+    static double zinsSatz = 0.01;
     private List<Konto> kontos = new ArrayList<>();
 
-    public Bank(String name, int gruendungsJahr) {
-        this.name = name;
-        this.gruendungsJahr = gruendungsJahr;
-    }
 
     public Konto kontoErstellen(int saldo) {
         Konto konto = new Konto(saldo);
@@ -33,7 +27,7 @@ public class Bank {
     }
 
     public String toString() {
-        return "Gründungsjahr: " + gruendungsJahr + " | Name: " + name + " | Zins-Satz: " + zinsSatz;
+        return "Zins-Satz: " + zinsSatz;
     }
 
     void print() {
